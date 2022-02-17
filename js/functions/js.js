@@ -54,11 +54,10 @@ function sendEmail(userId) {
 //option 2
 const mult = (firstNum, secondNum) => firstNum * secondNum;
 
-function sum() {
-    let test = "test";
-}
-console.log(test);
+
 // test data
 console.log(mult(20, 14));
 
 const getMagicNumber = () => 17;
+
+
