@@ -6,17 +6,17 @@ const Pagination = props => {
   const isPrevPageAvailable = currentPage === 1;
   const isNextPageAvailable = currentPage === Math.ceil(totalItems / itemsPerPage);
 
-  const showLeftArrow = () => (!isPrevPageAvailable ? '←' : '');
-  const showRightArrow = () => (!isNextPageAvailable ? '→' : '');
+  const hideLeftArrow = () => (isPrevPageAvailable ? '' : '←');
+  const hideRightArrow = () => (isNextPageAvailable ? '' : '→');
 
   return (
     <div className="pagination">
       <button className="btn" onClick={goPrev} disabled={isPrevPageAvailable}>
-        {showLeftArrow()}
+        {hideLeftArrow()}
       </button>
       <span className="pagination__page">{currentPage}</span>
       <button className="btn" onClick={goNext} disabled={isNextPageAvailable}>
-        {showRightArrow()}
+        {hideRightArrow()}
       </button>
     </div>
   );
